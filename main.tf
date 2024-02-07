@@ -62,25 +62,25 @@ resource "snowflake_user" "user" {
   login_name              = var.user_login_name
   comment                 = var.user_comment
   password                = var.user_password
-  disabled                = var.user_disabled
-  display_name            = var.user_display_name
-  email                   = var.user_email
-  first_name              = var.user_first_name
-  last_name               = var.user_last_name
-  default_warehouse       = var.user_default_warehouse
-  default_secondary_roles = var.user_default_secondary_roles
-  default_role            = var.user_default_role
-  must_change_password    = var.user_must_change_password
+  disabled                = false
+  display_name            = var.display_name
+  email                   = var.email
+  first_name              = var.first_name
+  last_name               = var.last_name
+  default_warehouse       = var.default_warehouse
+  default_secondary_roles = var.default_secondary_roles
+  default_role            = var.default_role
+  must_change_password    = false
 }
 
 # create role for user
 resource "snowflake_role" "role" {
-  name    = var.role_name
-  comment = var.role_comment
+  name    = var.name
+  comment = var.comment
 }
 
 resource "snowflake_role_grants" "grants" {
-  role_name = var.role_name
+  role_name = var.name
   roles     = [snowflake_role.role.name]
   users     = [snowflake_user.user.name]
 }
@@ -88,7 +88,7 @@ resource "snowflake_role_grants" "grants" {
 # list of privileges
 resource "snowflake_grant_privileges_to_role" "g1" {
   privileges = ["MODIFY", "USAGE"]
-  role_name  = var.role_name
+  role_name  = var.name
   on_account = true
 }
 
@@ -103,7 +103,7 @@ resource "snowflake_grant_privileges_to_role" "g2" {
 # privileges on database
 resource "snowflake_grant_privileges_to_role" "g3" {
   privileges = ["CREATE", "MONITOR"]
-  role_name  = var.role_name
+  role_name  = var.name
   on_account_object {
     object_type = "DATABASE"
     object_name = var.database_object_name
@@ -116,7 +116,7 @@ resource "snowflake_grant_privileges_to_role" "g3" {
 # privileges on schema
 resource "snowflake_grant_privileges_to_role" "g5" {
   privileges = ["MODIFY", "CREATE TABLE"]
-  role_name  = var.role_name
+  role_name  = var.name
   on_schema {
     schema_name = "\"my_database\".\"my_schema\""
   }
