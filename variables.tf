@@ -191,11 +191,6 @@ variable "comment" {
   type        = string
 }
 
-variable "role_privileges" {
-  description = "List of privileges for the Snowflake role"
-  type        = list(string)
-}
-
 variable "database_object_name" {
   description = "Name of the Snowflake database object for privilege grant"
   type        = string
@@ -205,4 +200,3 @@ variable "schema_full_name" {
   description = "Name of the Snowflake schema for privilege grant"
   type        = string
 }
-
