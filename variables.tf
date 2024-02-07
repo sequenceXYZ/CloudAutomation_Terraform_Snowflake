@@ -143,3 +143,66 @@ variable "user_password" {
   description = "Password for the Snowflake user"
   type        = string
 }
+
+
+variable "display_name" {
+  description = "Display name for the Snowflake user"
+  type        = string
+}
+
+variable "email" {
+  description = "Email address for the Snowflake user"
+  type        = string
+}
+
+variable "first_name" {
+  description = "First name of the Snowflake user"
+  type        = string
+}
+
+variable "last_name" {
+  description = "Last name of the Snowflake user"
+  type        = string
+}
+
+variable "default_warehouse" {
+  description = "Default warehouse for the Snowflake user"
+  type        = string
+}
+
+variable "default_secondary_roles" {
+  description = "List of default secondary roles for the Snowflake user"
+  type        = list(string)
+}
+
+variable "default_role" {
+  description = "Default role for the Snowflake user"
+  type        = string
+}
+
+
+variable "name" {
+  description = "Name of the Snowflake role"
+  type        = string
+}
+
+variable "comment" {
+  description = "Comment for the Snowflake role"
+  type        = string
+}
+
+variable "role_privileges" {
+  description = "List of privileges for the Snowflake role"
+  type        = list(string)
+}
+
+variable "database_object_name" {
+  description = "Name of the Snowflake database object for privilege grant"
+  type        = string
+}
+
+variable "schema_full_name" {
+  description = "Name of the Snowflake schema for privilege grant"
+  type        = string
+}
+
