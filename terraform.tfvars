@@ -45,22 +45,22 @@ column_extra = {
   comment = "extra data"
 }
 
-user_name                    = "my_user"
-user_login_name              = "my_user"
-user_comment                 = "A user of snowflake."
-user_password                = "User12user123!"
-user_disabled                = false
-user_display_name            = "my_user"
-user_email                   = "Agnija.Vjakse@gmail.com"
-user_first_name              = "my_user"
-user_last_name               = "my_user"
-user_default_warehouse       = "my_warehouse"
-user_default_secondary_roles = ["ALL"]
-user_default_role            = "role1"
-user_must_change_password    = false
+user_name               = "my_user"
+user_login_name         = "my_user"
+user_comment            = "A user of snowflake."
+user_password           = "User12user123!"
+display_name            = "my_user"
+email                   = "Agnija.Vjakse@gmail.com"
+first_name              = "my_user"
+last_name               = "my_user"
+default_warehouse       = "my_warehouse"
+default_secondary_roles = ["ALL"]
+default_role            = "role1"
 
-role_name    = "role1"
-role_comment = "my_user role."
+
+name    = "role1"
+comment = "my_user role."
 
 
 database_object_name = "my_database"
+
