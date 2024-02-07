@@ -60,6 +60,4 @@ default_role            = "role1"
 
 name    = "role1"
 comment = "my_user role."
-
-
 database_object_name = "database"
