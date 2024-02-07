@@ -94,7 +94,7 @@ resource "snowflake_grant_privileges_to_role" "g1" {
 
 # all privileges + grant option
 resource "snowflake_grant_privileges_to_role" "g2" {
-  role_name         = var.role.name
+  role_name         = var.name
   on_account        = true
   all_privileges    = true
   with_grant_option = true
@@ -121,4 +121,3 @@ resource "snowflake_grant_privileges_to_role" "g5" {
     schema_name = "\"my_database\".\"my_schema\""
   }
 }
-
