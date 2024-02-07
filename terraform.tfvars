@@ -63,7 +63,4 @@ role_name    = "role1"
 role_comment = "my_user role."
 
 
-database_object_name   = "my_database"
-role_on_account        = true
-role_all_privileges    = true
-role_with_grant_option = true
+database_object_name = "my_database"
