@@ -25,7 +25,7 @@ https://signup.snowflake.com/
 ### Setup Terraform Authentication
 - Add Account Information to Environment
 
-### Declare resouces
+### Declare resources
 - providers.tf
 - main.tf
 - variables.tf
