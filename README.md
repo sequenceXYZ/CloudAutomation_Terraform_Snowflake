@@ -1,7 +1,7 @@
 ## CloudAutomation_Terraform_Snowflake
 ### Objective: Leverage Terraform to automate the provisioning of Snowflake resources, ensuring adherence to Infrastructure as Code (IaC) best practices.
 ## Task Description:
-- As part of this task, you are to create a series of Terraform scripts/modules that will provision the following Snowflake resources:
+As part of this task, create a series of Terraform scripts/modules that will provision the following Snowflake resources:
 - Warehouse: A compute warehouse suitable for processing queries and data manipulation tasks.
 - Database: A dedicated database to house various schemas and tables.
 - Schema: Within the database, create a specific schema intended for the tables.
