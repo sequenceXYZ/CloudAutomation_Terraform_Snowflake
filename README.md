@@ -9,7 +9,8 @@
 - Role: A role with permissions that allow for database, schema, and warehouse access, and select privileges on the table.
 
 ## Prerequisites
-### Install Terraform
+
+### Terraform installation
 https://developer.hashicorp.com/terraform/install
 
 ### Snowflake account 
