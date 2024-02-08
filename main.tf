@@ -108,9 +108,6 @@ resource "snowflake_grant_privileges_to_role" "g3" {
     object_type = "DATABASE"
     object_name = var.database_object_name
   }
-  depends_on = [snowflake_role.role, snowflake_user.user,
-    snowflake_database.database, snowflake_schema.schema,
-  snowflake_table.table]
 }
 
 # privileges on schema
