@@ -30,7 +30,7 @@ https://signup.snowflake.com/
 - variables.tf
 - terraform.tfvars
 
-### Run Running Terraform
+### Run Terraform
 - terraform init
 - terraform plan
 - terraform apply
