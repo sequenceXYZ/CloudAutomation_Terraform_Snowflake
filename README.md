@@ -16,7 +16,7 @@ https://developer.hashicorp.com/terraform/install
 https://signup.snowflake.com/
 - Create the User in Snowflake
 
-### Getting Started
+## Getting Started
 
 ### Create a Service User for Terraform
 - Create an RSA key for Authentication
