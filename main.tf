@@ -56,7 +56,7 @@ resource "snowflake_schema_grant" "example_schema_grant" {
 
 resource "snowflake_warehouse_grant" "example_warehouse_grant" {
   warehouse_name = snowflake_warehouse.example_warehouse.name
-  privilege      = "USAGE"
+  privilege      = "MODIFY"
   roles          = [var.user_role]
 }
 
