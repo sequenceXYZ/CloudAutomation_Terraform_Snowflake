@@ -60,7 +60,8 @@ variable "table_name" {
 
 variable "role_name" {
   description = "The name of the Snowflake role"
-  type        = string}
+  type        = string
+}
 
 variable "user_name" {
   description = "The name of the new Snowflake user"
