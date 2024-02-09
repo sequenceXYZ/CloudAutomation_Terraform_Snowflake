@@ -12,3 +12,7 @@ database_name       = "example_database"
 schema_name         = "example_schema"
 table_name          = "example_table"
 role_name           = "example_role"
+
+user_name     = "new_user"
+user_password = "User12user123!"
+user_role     = "example_role"
