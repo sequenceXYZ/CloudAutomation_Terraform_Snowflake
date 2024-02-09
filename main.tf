@@ -90,4 +90,17 @@ resource "snowflake_role_grants" "user_role_grants" {
   users = [
     snowflake_user.new_user.name,
   ]
+# Explicitly specify dependencies to ensure this resource is executed last
+  depends_on = [
+    snowflake_warehouse.example_warehouse,
+    snowflake_database.example_database,
+    snowflake_schema.example_schema,
+    snowflake_table.example_table,
+    snowflake_role.example_role,
+    snowflake_database_grant.example_database_grant,
+    snowflake_schema_grant.example_schema_grant,
+    snowflake_warehouse_grant.example_warehouse_grant,
+    snowflake_table_grant.example_table_grant,
+    snowflake_user.new_user,
+  ]
 }
