@@ -62,3 +62,18 @@ variable "role_name" {
   description = "The name of the Snowflake role"
   type        = string}
 
+variable "user_name" {
+  description = "The name of the new Snowflake user"
+  type        = string
+}
+
+variable "user_password" {
+  description = "The password for the new Snowflake user"
+  type        = string
+}
+
+variable "user_role" {
+  description = "The role to be assigned to the new Snowflake user"
+  type        = string
+}
+
