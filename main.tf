@@ -44,20 +44,20 @@ resource "snowflake_role" "example_role" {
 resource "snowflake_database_grant" "example_database_grant" {
   database_name = snowflake_database.example_database.name
   privilege     = "USAGE"
-  roles         = [snowflake_role.example_role.name]
+  roles         = [var.user_role]
 }
 
 resource "snowflake_schema_grant" "example_schema_grant" {
   schema_name   = snowflake_schema.example_schema.name
   database_name = snowflake_database.example_database.name
   privilege     = "USAGE"
-  roles         = [snowflake_role.example_role.name]
+  roles         = [var.user_role]
 }
 
 resource "snowflake_warehouse_grant" "example_warehouse_grant" {
   warehouse_name = snowflake_warehouse.example_warehouse.name
   privilege      = "USAGE"
-  roles          = [snowflake_role.example_role.name]
+  roles          = [var.user_role]
 }
 
 resource "snowflake_table_grant" "example_table_grant" {
@@ -65,11 +65,8 @@ resource "snowflake_table_grant" "example_table_grant" {
   schema_name   = snowflake_schema.example_schema.name
   database_name = snowflake_database.example_database.name
   privilege     = "SELECT"
-  roles         = [snowflake_role.example_role.name]
+  roles         = [var.user_role]
 }
-
-
-
 
 
 resource "snowflake_user" "new_user" {
@@ -84,31 +81,3 @@ resource "snowflake_role_grants" "user_role_grants" {
     snowflake_user.new_user.name,
   ]
 }
-
-resource "snowflake_warehouse_grant" "example_warehouse_grant" {
-  warehouse_name = var.warehouse_name
-  privilege      = "USAGE"
-  roles          = [var.user_role]
-}
-
-resource "snowflake_database_grant" "example_database_grant" {
-  database_name = var.database_name
-  privilege     = "USAGE"
-  roles         = [var.user_role]
-}
-
-resource "snowflake_schema_grant" "example_schema_grant" {
-  schema_name   = var.schema_name
-  database_name = var.database_name
-  privilege     = "USAGE"
-  roles         = [var.user_role]
-}
-
-resource "snowflake_table_grant" "example_table_grant" {
-  table_name    = var.table_name
-  schema_name   = var.schema_name
-  database_name = var.database_name
-  privilege     = "SELECT"
-  roles         = [var.user_role]
-}
-
