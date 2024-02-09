@@ -90,7 +90,7 @@ resource "snowflake_role_grants" "user_role_grants" {
   users = [
     snowflake_user.new_user.name,
   ]
-# Explicitly specify dependencies to ensure this resource is executed last
+# specify dependencies to ensure this resource is executed last
   depends_on = [
     snowflake_warehouse.example_warehouse,
     snowflake_database.example_database,
